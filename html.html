@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+    
+    
+    <div class = "triangle">
+    <div class = "square1">
+    <div class = "square2"></div>   
+    </div></div>   
+    
+    
+    
+    
+    <script>
+        
+    
+    obj = document.getElementsByClassName("square2"); 
+    r=0;  
+    c=0;
+    m =2;
+    
+    
+    rotate(); 
+    function rotate(){
+    requestAnimationFrame(rotate);
+         
+    obj[0].style.transform = "rotate("+r+"deg)";  
+    obj[0].style.top = 140+Math.cos(c)*105+"px"; 
+    obj[0].style.left =60+ Math.sin(c/3)*45+"px"
+    obj[0].style.borderRadius =Math.sin(c/2)*45+"px"
+    
+    
+     r+=m;
+     c+=0.06;
+     
+         
+     }
+     
+     
+     
+     onclick= function minus(){
+         
+         
+         m=-m;
+         
+     }
+        
+        
+    </script>
+    
+        
+    </body>
+</html>
